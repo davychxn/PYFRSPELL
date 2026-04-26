@@ -104,24 +104,3 @@ python smoke_test.py --verbose
 ```
 
 Cette commande execute un smoke test local pour verifier l'import, le chargement du modele et les API principales.
-
-## Build Et Publication Sur PyPI
-
-1. Construire les fichiers du package:
-
-```bash
-python -m pip install --upgrade build
-python -m build
-```
-
-2. Publier sur PyPI:
-
-```bash
-python -m pip install --upgrade twine
-python -m twine upload dist/*
-```
-
-Artefacts generes:
-
-- `dist/pyfrspell-<version>-py3-none-any.whl`
-- `dist/pyfrspell-<version>.tar.gz`

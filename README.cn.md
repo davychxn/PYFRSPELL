@@ -104,24 +104,3 @@ python smoke_test.py --verbose
 ```
 
 该命令会执行本地冒烟测试，验证导入、模型加载和核心 API 是否可用。
-
-## 构建并上传到 PyPI
-
-1. 构建发布文件：
-
-```bash
-python -m pip install --upgrade build
-python -m build
-```
-
-2. 上传到 PyPI：
-
-```bash
-python -m pip install --upgrade twine
-python -m twine upload dist/*
-```
-
-构建产物：
-
-- `dist/pyfrspell-<version>-py3-none-any.whl`
-- `dist/pyfrspell-<version>.tar.gz`

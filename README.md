@@ -104,24 +104,3 @@ python smoke_test.py --verbose
 ```
 
 This runs a local smoke test to validate import, model loading, and core APIs.
-
-## Build and Upload to PyPI
-
-1. Build package files:
-
-```bash
-python -m pip install --upgrade build
-python -m build
-```
-
-2. Upload to PyPI:
-
-```bash
-python -m pip install --upgrade twine
-python -m twine upload dist/*
-```
-
-Build output:
-
-- `dist/pyfrspell-<version>-py3-none-any.whl`
-- `dist/pyfrspell-<version>.tar.gz`
