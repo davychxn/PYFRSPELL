@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfrspell"
+version = "0.1.0"
+description = "French lemma prediction and derivative form generation with ONNX Runtime."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  { name = "Davy Chen", email = "davy.chen@163.com" }
+]
+keywords = [
+  "french",
+  "lemma",
+  "conjugation",
+  "onnx",
+  "nlp",
+  "spelling"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Text Processing :: Linguistic"
+]
+dependencies = [
+  "onnxruntime>=1.18.0",
+  "numpy>=1.24.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/davychxn/FR-SPELL"
+Repository = "https://github.com/davychxn/FR-SPELL"
+Issues = "https://github.com/davychxn/FR-SPELL/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pyfrspell = ["models/community/*.onnx", "models/community/*.json"]
